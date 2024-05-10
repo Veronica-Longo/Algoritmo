@@ -1,75 +1,45 @@
-
-/* Ejercicio calculadora */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <conio.h>
 
-float tipooperacion(float,float,char);
-
-
-void main() 
-{
-    char rta [2],operacion;
-    float op1,op2;
-    float resultado=0;
-    
-    
-    do{ 
-    
-   	  printf ("Ingrese primer valor: \n");
-	  scanf("%f",&op1);
-	  printf("\n");
-	  printf("ingrese segundo valor: \n");
-	  scanf("%f",&op2);
-    
-    printf("ingrese el tipo de operacion: s (suma) r(resta) m(multiplicacion) d (division))");
-    fflush(stdin);
-	scanf("%c",&operacion);
-	printf("\n");
-    printf ("\n el resultado es: %.2f",tipooperacion(op1,op2,operacion)); 
-
-    printf("\n");
-	printf("Desea seguir ingresando operaciones? (si) o (no)\n");
-	scanf("%s",rta);
+void main(){
+int numdepa;
+char cat_depa;
 	
 	
-     } while(rta=="si"); 
-   
 }
-	
-	
-	float tipooperacion(float op1,float op2,char operacion)
-	{ float resultado=0; 
-	 switch (operacion) 
-	 {
-	 	case 's': 
-	 	     resultado=op1+op2;
-	 	    break;
-	 	case 'r':
-	 	    resultado= op1-op2;
-	 	    break;
-	 	case 'm': 
-	 	    resultado=op1*op2;
-	 	    break;
-	 	case 'd':
-	 		if(op2!=0)
-	 	    resultado=op1/op2;
-	 	    else 
-	 	    { 
-	 	     resultado=0;
-	 	     printf(" No se puede realizar la operacion \n");
-			 }
-	 	    break;
-	 	default: 
-	 	    printf("Error");
-	 	    resultado=0;
-	 	    break;
-	 }
-	
-	    return (resultado);
+
+int resultado_monto(char cat_depa, int marcaup,char marcac){
+	int montoexpe,base;
+	switch(cat_depa){
+		case 'p':
+			base=4000;
+		break;
+		case 's':
+			base=3000;
+		break;
+		case 'd':
+			base=2000;
+		break;	
+		case 'm':
+		     base=1000;
+		break;
+	if(marcaup==1){
+		montoexpe=base+2500;
 	}
+	else if(marcaup=='s'){
+		montoexpe=base+1500;
+	}	
+	else{
+		montoexpe=base+2500+1500;
+	}
+	return montoexpe;
+	}
+	
+void total_cant_depaD (int cant_depa_up){
+	printf("Total de departamento de categoria D que son de uso profesional: %d",cant_depa_up);
+	
+}
 
-
-
-
+}
