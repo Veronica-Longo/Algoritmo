@@ -1,45 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <conio.h>
-
-void main(){
-int numdepa;
-char cat_depa;
-	
-	
-}
-
-int resultado_monto(char cat_depa, int marcaup,char marcac){
-	int montoexpe,base;
-	switch(cat_depa){
-		case 'p':
-			base=4000;
-		break;
-		case 's':
-			base=3000;
-		break;
-		case 'd':
-			base=2000;
-		break;	
-		case 'm':
-		     base=1000;
-		break;
-	if(marcaup==1){
-		montoexpe=base+2500;
-	}
-	else if(marcaup=='s'){
-		montoexpe=base+1500;
-	}	
-	else{
-		montoexpe=base+2500+1500;
-	}
-	return montoexpe;
-	}
-	
-void total_cant_depaD (int cant_depa_up){
-	printf("Total de departamento de categoria D que son de uso profesional: %d",cant_depa_up);
-	
-}
-
+#define cp 30
+void main()
+{
+	float temperatura[cp]={0},promedio;
+	int i,pos=0,suma=0;
+	char rta;
+	do 
+	{
+	   printf("Ingrese Temperatura: ");
+	   scanf("%f",&temperatura[cp]);
+	   
+	   for(i=0;i<30;i++)
+	   
+	   	  {
+	   	  	pos++;
+	   	  	suma=suma+temperatura[cp];
+		  }
+		  
+	     promedio=suma/pos;
+	     
+	     
+	    
+	    
+	   
+	   
+	   
+	   printf("Desea seguir ingresando temperaturas?");
+	   fflush(stdin);
+	   scanf("%c",&rta);
+		
+     }while(rta=='s');
+     
+     printf("El promedio de mayor: %f",promedio);
 }
