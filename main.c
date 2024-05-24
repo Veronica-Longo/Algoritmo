@@ -1,36 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define cp 30
+ /* Rellene un array con los números pares comprendidos entre 1 y 100 y muéstrelos en
+pantalla en orden ascendente.*/
+
+
 void main()
 {
-	float temperatura[cp]={0},promedio;
-	int i,pos=0,suma=0;
-	char rta;
-	do 
+	int vector[51]={0};
+	int i,x=0;
+	
+
+	for(i=0;i<=100;i++)
 	{
-	   printf("Ingrese Temperatura: ");
-	   scanf("%f",&temperatura[cp]);
-	   
-	   for(i=0;i<30;i++)
-	   
-	   	  {
-	   	  	pos++;
-	   	  	suma=suma+temperatura[cp];
-		  }
-		  
-	     promedio=suma/pos;
-	     
-	     
-	    
-	    
-	   
-	   
-	   
-	   printf("Desea seguir ingresando temperaturas?");
-	   fflush(stdin);
-	   scanf("%c",&rta);
-		
-     }while(rta=='s');
-     
-     printf("El promedio de mayor: %f",promedio);
+		if((i%2)==0)
+		{
+		  	vector[x]=i;
+		  	x++;
+		}
+	}
+	
+	for(i=0;i<=50;i++)
+	{
+		printf("%d\n",vector[i]);
+	}
+	
+	
+
 }
+
+
