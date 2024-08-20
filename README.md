@@ -1,1 +1,3 @@
-# Algoritmo-y-estructura-de-datos
+#  ALGORITMO Y ESTRUCTURA DE DATOS - 1C-2024
+## APUNTES
+####  [CLASES GRABADAS](hhttps://youtu.be/QEKMeJBqBkEttp:// "CLASES GRABADAS")
